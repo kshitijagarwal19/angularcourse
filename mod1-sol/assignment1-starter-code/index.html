@@ -21,10 +21,13 @@
              <button class="btn btn-default" ng-click="check()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-          {{msg}} <!-- Your message can go here. -->
+          {{msg}} <!-- Your message can go here. --><br />
+orignal: {{ orignal() }} <br />
+custom:  {{ custom() }} <br />
+custom2: {{orignal()| test2: 'we':'i' }}
          </div>
    </div>
 <script src="../angular.min.js"></script>
-<script src="../app.js"> </script>
+<script src="../test.js"> </script>
 </body>
 </html>

@@ -2,8 +2,8 @@
   'use strict';
   angular.module('LunchChecker',[])
 .controller('LunchCheckerController',LunchCheckerController);
-LunchCheckerController.$inject =['$scope'];
-function LunchCheckerController($scope)
+LunchCheckerController.$inject =['$scope','$filter'];
+function LunchCheckerController($scope,$filter)
 {$scope.dishes= "";
 $scope.msg ="";
 $scope.check= function(){
@@ -11,7 +11,9 @@ $scope.check= function(){
   if(no_of_dishes==0)
 {  $scope.msg="Please enter data first";}
   else if (no_of_dishes.length <= 3 )
-  {  $scope.msg="Enjoy!";}
+  {  $scope.msg="Enjoy!";
+
+}
     else{
     $scope.msg="Too much!";
   }
