@@ -1,2 +1,2 @@
 # angularcourse
-Solution to coursera angular js courrse 
+Solution to coursera angularjs course 
