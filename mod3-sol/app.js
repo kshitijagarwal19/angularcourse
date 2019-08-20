@@ -1,14 +1,15 @@
-(function ()
-{ 'use strict';
+(function () {
+  'use strict';
+
 
 angular.module('NarrowItDownApp', [])
-.controller('NarrowItDownController ', NarrowItDownController )
+.controller('NarrowItDownController', NarrowItDownController)
 .service('MenuSearchService', MenuSearchService)
 .directive('foundItems', FoundItemsDirective);
 
 function FoundItemsDirective () {
   var ddo = {
-    templateURl: 'foundItems.html',
+    templateUrl: 'foundItems.html',
     scope : {
       found: '<',
       onRemove: '&'
@@ -66,7 +67,7 @@ function MenuSearchService ($http) {
 var service = this;
 
 service.getMatchedMenuItems = function(searchTerm) {
-  searchTerm = searchTerm.trim().toLowerCase();
+
 
     return $http( {
       method  :"GET",
@@ -94,4 +95,4 @@ service.getMatchedMenuItems = function(searchTerm) {
 
 
 
-})();
+}) ();
