@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+<head> <meta charset="utf-8">
+<link rel="stylesheet" href="css/styles.css">
+<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="images/png" href="images/restaurant-logo_small.png">
+
+<title>CHOW MAUN</title>
+  <head>
+  <header>
+         <nav id="header-nav" class="navbar ">
+          <div class="navbar-header">
+            <div id="logo-img" alt="Logo image"></div>
+            <div class="navbar-brand">
+              <h1>CHOW MAUN BISTRO</h1>
+              <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span>Kosher Certified</span>
+              </p>
+            </div>
+            </div>
+
+
+            <ul id="nav-list" >
+              <li id="navHomeButton" >
+                <a href="index.html"> Home</a>
+              </li>
+              <li id="navMenuButton" >
+                <a ui-sref="public.menu">
+                 Menu</a>
+              </li>
+              <li >
+                <a ui-sref="public.myinfo">
+                 My Info</a>
+              </li>
+              <li >
+                <a ui-sref="public.signup">
+                 Sign Up</a>
+              </li>
+              <li id="phone" >
+                <a href="tel:410-602-5008">
+                  <span>410-602-5008</span></a><div>* We Deliver</div>
+              </li>
+            </ul><!-- #nav-list -->
+
+      </nav><!-- #header-nav -->
+    </header>
+
+    <ui-view></ui-view>
+
+
+    <footer class="panel-footer">
+    <div class="container">
+    <div class="row">
+    <section id="hours" class="col-sm-4">
+    <span>Hours:</span><br>
+            Sun-Thurs: 11:15am - 10:00pm<br>
+            Fri: 11:15am - 2:30pm<br>
+            Saturday Closed
+              <hr >
+          </section>
+          <section id="address" class="col-sm-4">
+            <span>Address:</span><br>
+            7105 Reisterstown Road<br>
+            Baltimore, MD 21215
+            <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+            <hr >
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+            <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+          </section>
+        </div>
+        <div class="text-center">
+          &copy; Copyright Chow Maun Bistro 2019 |
+          <a ui-sref="admin.auth">Admin</a></div>
+      </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menuapp/menuapp.module.js"></script>
+    <script src="src/data/data.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+
+    <script src="src/menuapp/categories.component.js"></script>
+    <script src="src/menuapp/items.component.js"></script>
+    <script src="src/menuapp/category-list.controller.js"></script>
+    <script src="src/menuapp/items.controller.js"></script>
+    <script src="src/data/menudata.service.js"></script>
+
+
+</body>
+  </html>
